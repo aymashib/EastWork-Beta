@@ -17,6 +17,11 @@
     width: 2vh;
     height: 1vh;
 }
+.logo-image{
+    width: 8vh;
+    height: 6vh;
+}
+
 
 body {
     font-family: 'Roboto', Arial, sans-serif; /* Changed to include Arial as a fallback */
