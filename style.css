@@ -264,4 +264,7 @@ body {
 body.scrolled header {
     background-color: #007bff; /* Changed to dark blue for a modern look on scroll */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Added box shadow for depth */
+    nav ul li a {
+        color: #fff; /* Changed to white for better visibility on dark background */
+    }
 }
