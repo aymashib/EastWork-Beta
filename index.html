@@ -6,10 +6,10 @@
     <title>EastWork - Connect with Top Influencers</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </head>
 <body>
     <header>
-       
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <div class="nav-container">
@@ -67,9 +67,6 @@
             </div>
         </section>
 
-      
-
-
         <section id="smart-matching">
             <h2>EastWork Smart Matching</h2>
             <div class="card-container">
@@ -94,7 +91,15 @@
                 <div class="card">
                     <h3>Matched Influencers</h3>
                     <div id="influencer-list">
-                        <!-- Influencer cards will be dynamically added here -->
+                        <div class="influencer-profile">
+                            <img src="./assets/images/mrbeastpng.jpeg" alt="Influencer Profile Picture">
+                            <div class="profile-info">
+                                <h4>Mr Beast</h4>
+                                <p>Specialization: Fashion</p>
+                                <p>Follower Count: 100,000</p>
+                                <p>Engagement Rate: 5%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,19 +115,42 @@
             <div class="tab-content active" id="performance">
                 <h3>Campaign Performance</h3>
                 <p>Track the success of your influencer campaigns</p>
-                <div class="chart-placeholder">Chart Placeholder</div>
-            </div>
-            <div class="tab-content" id="audience">
-                <h3>Audience Demographics</h3>
-                <p>Understand your influencers' audience</p>
-                <div class="chart-placeholder">Chart Placeholder</div>
-            </div>
-            <div class="tab-content" id="trends">
-                <h3>Engagement Trends</h3>
-                <p>Analyze engagement patterns over time</p>
-                <div class="chart-placeholder">Chart Placeholder</div>
+                <div class="chart-placeholder">
+                    <canvas id="influencerCampaignsChart" width="400" height="200"></canvas> <!-- Canvas para el gráfico -->
+                </div>
             </div>
         </section>
+    
+        <script>
+            // Código para el gráfico de campañas de influencers
+            var ctx = document.getElementById('influencerCampaignsChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [{
+                        label: "Campaigns",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                        fill: false
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Influencer Campaigns Over Time'
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    
+        <script src="script.js"></script>
 
         <section id="features">
             <h2>EastWork Features</h2>
@@ -153,8 +181,38 @@
             <a href="#contact">Contact Us</a>
         </nav>
         <p>&copy; 2024 EastWork. All rights reserved.</p>
-       
     </footer>
+
+
+    <script>
+        var ctx = document.getElementById('influencerCampaignsChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: 'Campaigns',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45],
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Influencer Campaigns Over Time'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
