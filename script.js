@@ -1,23 +1,20 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      if (scrollTop > 49) {
-          $('body').addClass('header-fixed');
-      } else {
-          $('body').removeClass('header-fixed');
-      }
-      // change the style of the navbar when the user scrolls into the next zone.
-      // get the distance of the 2nd section from the top of the page - height of header.
-      var topOffset = $('#demosection2').offset().top;
-      var headerHeight = $('#topnav').height();
-      var transitionPoint = topOffset - headerHeight;
-      if (scrollTop > transitionPoint) {
-          $('#topnav').addClass('alt-header');
-      } else {
-          $('#topnav').removeClass('alt-header');
-      }
-    });
-  });
+const toggleMenu = document.querySelector('nav .toggle-menu');
+		const content = document.querySelector('#content');
+		const closeBtn = document.querySelector('nav .nav-menu .close-btn');
+
+		toggleMenu.addEventListener('click', function () {
+			content.classList.add('active');
+		})
+
+		closeBtn.addEventListener('click', function () {
+			content.classList.remove('active');
+		})
+
+		window.addEventListener('resize', function () {
+			if(this.innerWidth > 576) {
+				content.classList.remove('active');
+			}
+		})
   // Example chart for influencer campaigns
   var ctx = document.getElementById('influencerCampaignsChart').getContext('2d');
   var chart = new Chart(ctx, {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EastWork - Connect with Top Influencers</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </head>
@@ -13,47 +13,25 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <div class="nav-container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="./assets/images/WhatsApp_Image_2024-10-06_at_18.13.44-removebg-preview.png" class="logo-image" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
+        <nav>
+            <div class="container">
+                <img src="./assets/images/WhatsApp_Image_2024-10-06_at_18.13.44-removebg-preview.png" class="brand"></img>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="close-btn"><i class='bx bx-x'></i></li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+                <i class='bx bx-menu-alt-right toggle-menu' ></i>
             </div>
-          </nav>
+        </nav>
         </div>
     </header>
 
     <main>
         <section id="hero">
+            <div class="main-hero-container">
             <h1>Connect with Top Influencers on EastWork</h1>
             <p>Seamlessly connect brands and influencers based on precise, customizable filters, maximizing campaign effectiveness.</p>
             <div class="wrapper">
@@ -65,6 +43,7 @@
                     </button>
                 </div>
             </div>
+        </div>
         </section>
 
         <section id="smart-matching">
@@ -95,9 +74,9 @@
                             <img src="./assets/images/mrbeastpng.jpeg" alt="Influencer Profile Picture">
                             <div class="profile-info">
                                 <h4>Mr Beast</h4>
-                                <p>Specialization: Fashion</p>
-                                <p>Follower Count: 100,000</p>
-                                <p>Engagement Rate: 5%</p>
+                                <p>Specialization: Entertainment</p>
+                                <p>Follower Count: 320M</p>
+                                <p>Engagement Rate: 15.3%</p>
                             </div>
                         </div>
                     </div>
@@ -156,17 +135,17 @@
             <h2>EastWork Features</h2>
             <div class="feature-cards">
                 <div class="feature-card">
-                    <img src="/placeholder.svg?height=50&width=50&text=🌐" alt="Globe icon">
+                    <img src="./assets/images/globe.png" alt="Globe icon">
                     <h3>Multi-Language Support</h3>
                     <p>Global platform with support for multiple languages and regions.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="/placeholder.svg?height=50&width=50&text=👥" alt="Users icon">
+                    <img src="./assets/images/b2b.png" alt="Users icon">
                     <h3>Scalable for All Businesses</h3>
                     <p>Suitable for both SMEs and large corporations with flexible pricing.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="/placeholder.svg?height=50&width=50&text=💬" alt="Message icon">
+                    <img src="./assets/images/chat.png" alt="Message icon">
                     <h3>Direct Communication Tools</h3>
                     <p>In-platform tools for seamless brand-influencer collaboration.</p>
                 </div>
@@ -175,7 +154,7 @@
     </main>
 
     <footer>
-        <nav>
+        <nav class="nav-footer">
             <a href="#terms">Terms of Service</a>
             <a href="#privacy">Privacy Policy</a>
             <a href="#contact">Contact Us</a>
