@@ -48,4 +48,16 @@ const toggleMenu = document.querySelector('nav .toggle-menu');
       }
     }
   });
-  
+// Seleccionamos todos los botones del menú con la clase .menu-button
+const buttons = document.querySelectorAll('.menu-button');
+
+// Añadimos un event listener a cada botón
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remover la clase 'active' de todos los botones
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Añadir la clase 'active' solo al botón clicado
+        this.classList.add('active');
+    });
+});

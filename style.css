@@ -85,7 +85,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: cadetblue; /* Hover color for a modern and cool look */
+    color: lightskyblue;
     text-decoration: none;
 }
 
@@ -226,6 +226,15 @@ section {
 .tab-content.active {
     display: block;
 }
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #007bff; /* Changed to dark blue for a modern look */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Added transition for dynamic background color */
+}
+
 
 .chart-placeholder {
     background-color: #f0f0f0; /* Changed to a lighter background for a modern look */
@@ -349,3 +358,9 @@ h1, h2, h3, h4, h5, h6 {
     50% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
+.tab-button-inactive {
+    background-color: transparent; /* Removed background color */
+    color: #666; /* Changed text color to a darker gray */
+}
+
+
